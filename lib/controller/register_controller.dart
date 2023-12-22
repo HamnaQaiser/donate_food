@@ -28,7 +28,7 @@ class RegisterProvider with ChangeNotifier{
       setLoading(false);
       // final user =  auth.currentUser
       final id = value.user!.uid.toString();
-      // SessionController().userId = auth.currentUser!.uid;
+      SessionController().userId = id;
 
       dbRef.doc(id).set({
         'id': id,
